@@ -1,0 +1,70 @@
+package GUI;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+import GUI.framework.CustomButton;
+import GUI.framework.CustomLabel;
+import GUI.framework.CustomTextField;
+import Networking.MySqlConnection;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+public class Gui {
+
+	JFrame window;
+	public static Font font = new Font(Font.SANS_SERIF, Font.BOLD, 15);
+	CustomButton SwitchSignIn;
+	CustomButton SwitchLogin;
+	LogInPage loginpage;
+	SignInPage signinpage;
+	
+	public Gui() {
+		window = new JFrame("Nav Launcher");
+		window.setSize(500, 600);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);	
+		window.getContentPane().setBackground(new Color(90, 90, 90));
+		window.setLayout(null);
+		
+		new MySqlConnection();   
+		
+		loginpage = new LogInPage();
+		signinpage = new SignInPage();
+		
+		SwitchLogin = new CustomButton("Sign In");
+		SwitchLogin.setFont(font.deriveFont(12));
+		SwitchLogin.setSize(90, 20);
+		SwitchLogin.setLocation(50, 20);
+		
+		SwitchLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}	
+		});
+		
+		SwitchSignIn = new CustomButton("Log In");
+		SwitchSignIn.setFont(font.deriveFont(12));
+		SwitchSignIn.setSize(90, 20);
+		SwitchSignIn.setLocation(350, 20);
+		SwitchSignIn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}	
+		});
+		
+		
+		
+		window.add(SwitchLogin);
+		window.add(SwitchSignIn);
+		window.add(loginpage.getPanel());
+		window.add(signinpage.getPanel());
+		
+		SwingUtilities.updateComponentTreeUI(window);
+	}
+}

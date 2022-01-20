@@ -1,0 +1,55 @@
+package GUI;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+import GUI.framework.CustomButton;
+import GUI.framework.CustomLabel;
+import GUI.framework.CustomTextField;
+import Networking.MySqlConnection;
+
+import java.awt.*;
+import java.util.ArrayList;
+
+public class Gui {
+
+	JFrame window;
+	public static Font font = new Font(Font.SANS_SERIF, Font.BOLD, 15);
+	
+	CustomButton SwitchSignIn;
+	CustomButton SwitchLogin;
+	
+	public Gui() {
+		window = new JFrame("Nav Launcher");
+		window.setSize(500, 600);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);	
+		window.getContentPane().setBackground(new Color(90, 90, 90));
+		window.setLayout(null);
+		
+		new MySqlConnection();   
+		
+		
+		
+		SwitchLogin = new CustomButton("Sign In");
+		SwitchLogin.setFont(font.deriveFont(12));
+		SwitchLogin.setSize(90, 20);
+		SwitchLogin.setLocation(50, 20);
+		
+		SwitchSignIn = new CustomButton("Log In");
+		SwitchSignIn.setFont(font.deriveFont(12));
+		SwitchSignIn.setSize(90, 20);
+		SwitchSignIn.setLocation(350, 20);
+		
+		window.add(gmail);
+		window.add(password);
+		window.add(button);
+		window.add(label);
+		window.add(gmailLabel);
+		window.add(PasswordLabel);
+		window.add(SwitchLogin);
+		window.add(SwitchSignIn);
+		
+		SwingUtilities.updateComponentTreeUI(window);
+	}
+}

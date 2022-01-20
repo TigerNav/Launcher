@@ -1,0 +1,29 @@
+package GUI.framework;
+
+import java.awt.Graphics;
+import java.awt.*;
+import javax.swing.JLabel;
+
+public class CustomLabel extends JLabel{
+
+	public CustomLabel() {
+		setBackground(LabelColor);
+	}
+	
+	public Color getLabelColor() {
+		return LabelColor;
+	}
+
+	public void setLabelColor(Color labelColor) {
+		LabelColor = labelColor;
+	}
+
+	private Color LabelColor;
+	
+	@Override
+	public void paint(Graphics g) {
+		
+		super.paint(g);
+	}
+
+}

@@ -1,0 +1,19 @@
+package GUI.framework;
+
+import java.awt.Graphics;
+
+import javax.swing.JLabel;
+
+public class CustomLabel extends JLabel{
+
+	public CustomLabel() {
+		
+	}
+	
+	@Override
+	public void paint(Graphics g) {
+		
+		super.paint(g);
+	}
+
+}

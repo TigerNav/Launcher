@@ -1,0 +1,9 @@
+package GUI.framework;
+
+public class drawline {
+
+	public drawline() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

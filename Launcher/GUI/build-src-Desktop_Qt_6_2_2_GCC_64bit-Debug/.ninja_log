@@ -1,0 +1,39 @@
+# ninja log v5
+133	1393	1640413043719553258	CMakeFiles/src.dir/main.cpp.o	bb63ab7da3e258d3
+1	15	1640456459899631052	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+1	15	1640456459899631052	src_autogen/timestamp	bed45af86a826f6f
+1261	1621	1640456461503631098	src	fbcfc17e701558bc
+1	15	1640456459899631052	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+1	15	1640456459899631052	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+132	1256	1640413043579553254	CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o	9beaf9be4e0b3728
+16	1261	1640456461143631087	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+2	15	1640456504067632301	src_autogen/timestamp	bed45af86a826f6f
+2	15	1640456504067632301	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+2	15	1640456504067632301	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+2	15	1640456504067632301	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+16	1337	1640456505387632339	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+1337	1637	1640456505687632347	src	fbcfc17e701558bc
+2	17	1640456655047636571	src_autogen/timestamp	bed45af86a826f6f
+2	17	1640456655047636571	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+2	17	1640456655047636571	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+2	17	1640456655047636571	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+18	1336	1640456656363636608	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+1336	1665	1640456656691636618	src	fbcfc17e701558bc
+1	14	1640456856687642274	src_autogen/timestamp	bed45af86a826f6f
+1	14	1640456856687642274	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+1	14	1640456856687642274	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+1	14	1640456856687642274	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+14	1373	1640456858047642312	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+1373	1733	1640456858407642322	src	fbcfc17e701558bc
+1	14	1640456898599643459	src_autogen/timestamp	bed45af86a826f6f
+1	14	1640456898599643459	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+1	14	1640456898599643459	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+1	14	1640456898599643459	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+14	1309	1640456899895643496	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+1309	1666	1640456900251643506	src	fbcfc17e701558bc
+2	17	1640456922223644127	src_autogen/timestamp	bed45af86a826f6f
+2	17	1640456922223644127	src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+2	17	1640456922223644127	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/timestamp	bed45af86a826f6f
+2	17	1640456922223644127	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Debug/src_autogen/mocs_compilation.cpp	bed45af86a826f6f
+18	1394	1640456923603644166	CMakeFiles/src.dir/window.cpp.o	44f9457f4bc7e95f
+1394	1713	1640456923919644175	src	fbcfc17e701558bc

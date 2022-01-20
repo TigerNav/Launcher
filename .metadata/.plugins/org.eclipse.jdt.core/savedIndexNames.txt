@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/home/navin/Desktop/Programming shit i did/The Sethi Applications/.metadata/.plugins/org.eclipse.jdt.core
+1075335960.index
+731563413.index
+1865797976.index
+719457382.index
+2338056245.index

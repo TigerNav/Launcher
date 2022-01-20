@@ -1,0 +1,10 @@
+package Networking;
+
+
+public class MySqlConnection {
+
+	public MySqlConnection() {
+		
+	}
+
+}

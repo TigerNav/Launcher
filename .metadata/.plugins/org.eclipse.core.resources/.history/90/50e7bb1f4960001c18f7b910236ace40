@@ -1,0 +1,15 @@
+package GUI.framework;
+
+import java.util.List;
+
+import javax.swing.JLabel;
+
+public class LabelChangePanel {
+
+	List<JLabel> labels;
+	
+	public LabelChangePanel() {
+		labels = new List<JLabels>(); 
+	}
+
+}

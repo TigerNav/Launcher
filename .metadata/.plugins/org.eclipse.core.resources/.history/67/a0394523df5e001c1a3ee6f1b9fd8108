@@ -1,0 +1,9 @@
+package Networking;
+
+public class MySqlConnection {
+
+	public MySqlConnection() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

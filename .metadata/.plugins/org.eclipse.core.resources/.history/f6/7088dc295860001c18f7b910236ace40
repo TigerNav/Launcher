@@ -1,0 +1,38 @@
+package GUI.framework;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.*;
+
+public class LabelChangePanel extends JComponent{
+
+	ArrayList<JLabel> labels;
+	
+	public LabelChangePanel() {
+		labels = new ArrayList<JLabel>(); 
+	}
+
+	public void add(JLabel label) {
+		labels.add(label);
+	}
+	
+	
+	public void update(JFrame window) {
+		for (JLabel label : labels) {
+			window.add(label);
+		}
+	}
+
+	@Override
+	protected void paintComponent(Graphics g) {
+		
+		
+		
+		super.paintComponent(g);
+	}
+	
+}

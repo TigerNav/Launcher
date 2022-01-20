@@ -1,0 +1,9 @@
+# ninja log v5
+0	156	1640358931477147186	src_autogen/timestamp	451044215598fec8
+0	156	1640358931477147186	src_autogen/mocs_compilation.cpp	451044215598fec8
+0	156	1640358931477147186	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Release/src_autogen/timestamp	451044215598fec8
+0	156	1640358931477147186	/home/navin/Desktop/Programming shit i did/The Sethi Applications/Launcher/GUI/build-src-Desktop_Qt_6_2_2_GCC_64bit-Release/src_autogen/mocs_compilation.cpp	451044215598fec8
+156	1066	1640358932393147212	CMakeFiles/src.dir/src_autogen/mocs_compilation.cpp.o	e196ae3696514b71
+156	1152	1640358932477147215	CMakeFiles/src.dir/main.cpp.o	d5b9e51a4384eeeb
+156	1173	1640358932501147215	CMakeFiles/src.dir/window.cpp.o	72c6172fd434cd4d
+1173	1465	1640358932789147223	src	87d6472ff952f363

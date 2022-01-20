@@ -1,0 +1,34 @@
+package GUI.framework;
+
+import java.awt.*;
+
+import javax.swing.JComponent;
+
+public class drawline extends JComponent{
+
+	int x, y, w, h;
+	Color color;
+	
+	public drawline(int x, int y, int w, int h) {
+		this.x = x;
+		this.y = y;
+		this.w = w;
+		this.h = h;
+		
+	}
+	
+	public void setColor(Color color) {
+		this.color = color;
+	}
+	
+	@Override
+	protected void paintComponent(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		
+		g2.drawLine(x, y, w, h);
+		g2.setColor(color);
+		
+		super.paintComponent(g);
+	}
+
+}

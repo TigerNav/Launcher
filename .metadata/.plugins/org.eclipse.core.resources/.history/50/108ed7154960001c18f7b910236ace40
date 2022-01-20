@@ -1,0 +1,9 @@
+package GUI.framework;
+
+public class LabelChangePanel {
+
+	public LabelChangePanel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,14 @@
+package Networking;
+
+
+public class MySqlConnection {
+
+	
+	String url = "jdbc::mysql://localhost:3306/javabase";
+	
+	
+	public MySqlConnection() {
+		
+	}
+
+}
