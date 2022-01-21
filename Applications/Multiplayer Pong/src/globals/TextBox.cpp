@@ -4,7 +4,7 @@ TextBox::TextBox(){}
 
 TextBox::TextBox(sf::RenderWindow *window) {
     w = window;
-    texture.loadFromFile("/home/navin/Desktop/Programming shit i did/The Sethi Applications/Applications/Multiplayer Pong/src/Assets/TextBox.png");
+    texture.loadFromFile("/home/navin/Desktop/Programming shit i did/Launcher/Applications/Multiplayer Pong/src/Assets/TextBox.png");
     sprite.setTexture(texture);
 
     character = 0;
@@ -32,8 +32,6 @@ void TextBox::update(std::string string) {
 
         text.setString(bruh);
     }
-
-    std::cout << character << std::endl;
     
 }
 

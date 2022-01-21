@@ -5,43 +5,43 @@ Menu::Menu() {
 }
 
 Menu::Menu(sf::RenderWindow *window) : textbox(window){
-w = window;
+    w = window;
 
-engine::font.loadFromFile("/home/navin/Desktop/Programming shit i did/The Sethi Applications/Applications/Multiplayer Pong/src/Assets/shit.ttf");
+    engine::font.loadFromFile("/home/navin/Desktop/Programming shit i did/Launcher/Applications/Multiplayer Pong/src/Assets/shit.ttf");
 
 
-Title.setFont(engine::font);
-Title.setString("Multiplayer Pong");
-Title.setCharacterSize(35);
-Title.setPosition(380, 50);
+    Title.setFont(engine::font);
+    Title.setString("Multiplayer Pong");
+    Title.setCharacterSize(35);
+    Title.setPosition(380, 50);
 
-LocalGame.setFont(engine::font);
-LocalGame.setString("Local Game");
-LocalGame.setCharacterSize(20);
-LocalGame.setPosition(550, 200);
+    LocalGame.setFont(engine::font);
+    LocalGame.setString("Local Game");
+    LocalGame.setCharacterSize(20);
+    LocalGame.setPosition(550, 200);
 
-OnlineMatch.setFont(engine::font);
-OnlineMatch.setString("Online Match");
-OnlineMatch.setCharacterSize(20);
-OnlineMatch.setPosition(530, 300);
+    OnlineMatch.setFont(engine::font);
+    OnlineMatch.setString("Online Match");
+    OnlineMatch.setCharacterSize(20);
+    OnlineMatch.setPosition(530, 300);
 
-Option.setFont(engine::font);
-Option.setString("Options");
-Option.setCharacterSize(20);
-Option.setPosition(580,400);
+    Option.setFont(engine::font);
+    Option.setString("Options");
+    Option.setCharacterSize(20);
+    Option.setPosition(580,400);
 
-exit.setFont(engine::font);
-exit.setString("Exit");
-exit.setCharacterSize(20);
-exit.setPosition(610, 500);
+    exit.setFont(engine::font);
+    exit.setString("Exit");
+    exit.setCharacterSize(20);
+    exit.setPosition(610, 500);
 
-MenuItems.push_back(Title);
-MenuItems.push_back(LocalGame);
-MenuItems.push_back(OnlineMatch);
-MenuItems.push_back(Option);
-MenuItems.push_back(exit);
+    MenuItems.push_back(Title);
+    MenuItems.push_back(LocalGame);
+    MenuItems.push_back(OnlineMatch);
+    MenuItems.push_back(Option);
+    MenuItems.push_back(exit);
 
-textbox.InitTextBox(420, 620);
+    textbox.InitTextBox(420, 620);
 
 }
 
@@ -62,8 +62,6 @@ void Menu::update() {
     if(engine::MouseCollision(exit))
         MenuSelection = 4;
 
-    std::cout << MenuSelection << std::endl;
-
     switch (MenuSelection) {
     case 0:
         MenuSelection = 4;
@@ -76,6 +74,10 @@ void Menu::update() {
             changeOption = true;
             changeExit = true;
             }
+        LocalGame.setFillColor(sf::Color::Cyan);
+        OnlineMatch.setFillColor(sf::Color::White);
+        Option.setFillColor(sf::Color::White);
+        exit.setFillColor(sf::Color::White);
         textbox.update("Play a game within your local \nnetwork. Or Host a game for \neveryone in your local \nnetwork join");
         break;
     case 2:
@@ -86,6 +88,10 @@ void Menu::update() {
             changeOption = true;
             changeExit = true;
             }
+        LocalGame.setFillColor(sf::Color::White);
+        OnlineMatch.setFillColor(sf::Color::Cyan);
+        Option.setFillColor(sf::Color::White);
+        exit.setFillColor(sf::Color::White);
         textbox.update("Find a match with a another \nrandom person waiting to be \nchallanged.");
         break;
     case 3:
@@ -96,6 +102,10 @@ void Menu::update() {
             changeOption = false;
             changeExit = true;
             } 
+        LocalGame.setFillColor(sf::Color::White);
+        OnlineMatch.setFillColor(sf::Color::White);
+        Option.setFillColor(sf::Color::Cyan);
+        exit.setFillColor(sf::Color::White);
         textbox.update("Optimize the game experience \nto your liking.");
         break;
     case 4:
@@ -106,6 +116,10 @@ void Menu::update() {
             changeOption = true;
             changeExit = false;
             }
+        LocalGame.setFillColor(sf::Color::White);
+        OnlineMatch.setFillColor(sf::Color::White);
+        Option.setFillColor(sf::Color::White);
+        exit.setFillColor(sf::Color::Cyan);
         textbox.update("Sometimes playing a game too \nmuch makes you worse. Go take \na break and come back when \nyou feel better!");
         break;
     case 5:
