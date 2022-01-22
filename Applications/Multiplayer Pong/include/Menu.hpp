@@ -14,6 +14,7 @@ private:
     TextBox textbox;
     int MenuSelection;
     bool changeLocal = true, changeOnline = true, changeOption = true, changeExit = true;
+    bool showMenu;
 
 public:
     Menu();

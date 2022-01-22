@@ -7,8 +7,10 @@ Menu::Menu() {
 Menu::Menu(sf::RenderWindow *window) : textbox(window){
     w = window;
 
-    engine::font.loadFromFile("/home/navin/Desktop/Programming shit i did/Launcher/Applications/Multiplayer Pong/src/Assets/shit.ttf");
+    showMenu = true;
 
+    engine::font.loadFromFile("/home/navin/Desktop/Programming shit i did/Launcher/Applications/Multiplayer Pong/src/Assets/shit.ttf");
+    MenuSelection = 1;
 
     Title.setFont(engine::font);
     Title.setString("Multiplayer Pong");
@@ -47,11 +49,16 @@ Menu::Menu(sf::RenderWindow *window) : textbox(window){
 
 void Menu::PollUpdate() {
 
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+        MenuSelection--;
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+        MenuSelection++;
+
 }
 
 void Menu::update() {
 
-    
+if(showMenu){
 
     if(engine::MouseCollision(LocalGame))
         MenuSelection = 1;
@@ -61,7 +68,7 @@ void Menu::update() {
         MenuSelection = 3;
     if(engine::MouseCollision(exit))
         MenuSelection = 4;
-
+        
     switch (MenuSelection) {
     case 0:
         MenuSelection = 4;
@@ -79,6 +86,9 @@ void Menu::update() {
         Option.setFillColor(sf::Color::White);
         exit.setFillColor(sf::Color::White);
         textbox.update("Play a game within your local \nnetwork. Or Host a game for \neveryone in your local \nnetwork join");
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
+            showMenu = false;
+        }
         break;
     case 2:
         if(changeOnline){
@@ -93,6 +103,9 @@ void Menu::update() {
         Option.setFillColor(sf::Color::White);
         exit.setFillColor(sf::Color::White);
         textbox.update("Find a match with a another \nrandom person waiting to be \nchallanged.");
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
+            showMenu = false;
+        }
         break;
     case 3:
         if(changeOption){
@@ -107,6 +120,9 @@ void Menu::update() {
         Option.setFillColor(sf::Color::Cyan);
         exit.setFillColor(sf::Color::White);
         textbox.update("Optimize the game experience \nto your liking.");
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
+            showMenu = false;
+        }
         break;
     case 4:
         if(changeExit){
@@ -121,23 +137,28 @@ void Menu::update() {
         Option.setFillColor(sf::Color::White);
         exit.setFillColor(sf::Color::Cyan);
         textbox.update("Sometimes playing a game too \nmuch makes you worse. Go take \na break and come back when \nyou feel better!");
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
+            showMenu = false;
+        }
         break;
     case 5:
         MenuSelection = 1;
         break;
     };
 
-    
+}
 }
 
 void Menu::render() {
-    w->draw(Title);
-    w->draw(LocalGame);
-    w->draw(OnlineMatch);
-    w->draw(Option);
-    w->draw(exit);
-    textbox.render();
-    
+
+    if(showMenu){
+        w->draw(Title);
+        w->draw(LocalGame);
+        w->draw(OnlineMatch);
+        w->draw(Option);
+        w->draw(exit);
+        textbox.render();
+    }
 
 }
 
