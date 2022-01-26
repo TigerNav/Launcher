@@ -30,7 +30,6 @@ void Window::update(sf::RenderWindow &window) {
         }
         menu.update();
         
-
         window.clear(sf::Color(41, 41, 41));
 
         menu.render();

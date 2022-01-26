@@ -11,6 +11,7 @@ class engine {
 public:
 
 inline static bool MouseCollision(sf::Text square);
+inline static float centerOfRect(sf::FloatRect rect);
 inline static sf::Font font;
 
 };

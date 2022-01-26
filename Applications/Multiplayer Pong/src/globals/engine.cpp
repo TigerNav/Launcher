@@ -1,8 +1,6 @@
 #include "engine.hpp"
 
 
-
-
 bool engine::MouseCollision(sf::Text square) {
     
     return Window::MousePosX >= square.getPosition().x 
@@ -10,4 +8,8 @@ bool engine::MouseCollision(sf::Text square) {
     && Window::MousePosY >= square.getPosition().y 
     && Window::MousePosY <= (square.getPosition().y + square.getGlobalBounds().height);
 
+}
+
+float engine::centerOfRect(sf::FloatRect rect) {
+    return (rect.width) / 2 - (rect.height) / 2;
 }

@@ -4,6 +4,7 @@
 #include <iostream>
 #include "engine.hpp"
 #include "TextBox.hpp"
+#include "LocalMenu.hpp"
 
 class Menu {
 
@@ -14,7 +15,8 @@ private:
     TextBox textbox;
     int MenuSelection;
     bool changeLocal = true, changeOnline = true, changeOption = true, changeExit = true;
-    bool showMenu;
+    bool showMenu, showLocal, showOnline, showOption, showExit;
+    LocalMenu localMenu;
 
 public:
     Menu();

@@ -5,6 +5,7 @@
 #include "globals/engine.cpp"
 #include "Window.hpp"
 #include "globals/TextBox.cpp"
+#include "Menu/LocalMenu.cpp"
 
 
 int main() {
