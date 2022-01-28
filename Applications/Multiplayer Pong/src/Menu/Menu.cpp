@@ -61,14 +61,27 @@ void Menu::update() {
 
     if(showMenu){
 
-        if(engine::MouseCollision(LocalGame))
+        if(engine::MouseCollision(LocalGame)) {
             MenuSelection = 1;
-        if(engine::MouseCollision(OnlineMatch))
+        }
+        else if(engine::MouseCollision(OnlineMatch)) {
             MenuSelection = 2;
-        if(engine::MouseCollision(Option))
+        }
+        else if(engine::MouseCollision(Option)) {
             MenuSelection = 3;
-        if(engine::MouseCollision(exit))
+        }
+        else if(engine::MouseCollision(exit)) {
             MenuSelection = 4;
+        }
+        else{
+            MenuSelection = -1;
+            textbox.character = 0;
+            textbox.update(" ");
+            LocalGame.setFillColor(sf::Color::White);
+            OnlineMatch.setFillColor(sf::Color::White);
+            Option.setFillColor(sf::Color::White);
+            exit.setFillColor(sf::Color::White);
+        }
             
         switch (MenuSelection) {
         case 0:
