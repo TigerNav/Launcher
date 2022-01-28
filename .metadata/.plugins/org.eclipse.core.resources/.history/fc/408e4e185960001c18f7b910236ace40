@@ -1,9 +1,0 @@
-package GUI.framework;
-
-public class drawline {
-
-	public drawline() {
-		
-	}
-
-}

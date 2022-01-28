@@ -1,9 +1,0 @@
-package GUI.framework;
-
-public class CustomLabel {
-
-	public CustomLabel() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
