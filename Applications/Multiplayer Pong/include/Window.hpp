@@ -1,5 +1,5 @@
 
-/** \author @TigerNav */
+/** @author @TigerNav */
 
 
 //////////////////
@@ -59,7 +59,7 @@ Window(sf::RenderWindow &window);
 /**
  
    @brief 
-   Runs every frame 
+   Runs every frame. Handles all of the input and rendering.
    
    @param window reference pointer used for other parameters that need window variable. Defined in Window()
 

@@ -1,5 +1,5 @@
 
-// Author @TigerNav //
+/** @author @TigerNav */
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
