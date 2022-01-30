@@ -2,8 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
-#include "engine.hpp"
-#include "TextBox.hpp"
+#include "Engine/engine.hpp"
+#include "Engine/TextBox.hpp"
 #include "LocalMenu.hpp"
 
 class Menu {
