@@ -1,7 +1,6 @@
 
 /** @author @TigerNav */
 
-
 //////////////////
 // Files needed
 /////////////////
@@ -14,7 +13,7 @@ class LocalMenu
 {
 
 private:
-    inline static sf::Text Title;
+    sf::Text Title;
     sf::Text Host;
     sf::Text Join;
     sf::Text Back;

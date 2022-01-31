@@ -34,11 +34,13 @@ void LocalMenu::update() {
 
     if(renderLocalMenu) {
 
-        if(engine::MouseCollision(Host))
+        if(engine::MouseCollision(Host)) {
             MenuSelection = 1;
-        if(engine::MouseCollision(Join))
+        }
+        else if(engine::MouseCollision(Join)) {
             MenuSelection = 2;
-        if(engine::MouseCollision(Back)){
+        }
+        else if(engine::MouseCollision(Back)) {
             MenuSelection = 3;
         }
         else{
@@ -55,7 +57,7 @@ void LocalMenu::update() {
                 Join.setFillColor(sf::Color::White);
                 Back.setFillColor(sf::Color::White);
                 if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
-
+                    localMenuhost = true;
                     renderLocalMenu = false;
                 }
                 break;
@@ -64,7 +66,7 @@ void LocalMenu::update() {
                 Join.setFillColor(sf::Color::Cyan);
                 Back.setFillColor(sf::Color::White);
                 if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)){
-
+                    localMenujoin = true;
                     renderLocalMenu = false;
                 }
                 break;
@@ -72,7 +74,8 @@ void LocalMenu::update() {
                 Host.setFillColor(sf::Color::White);
                 Join.setFillColor(sf::Color::White);
                 Back.setFillColor(sf::Color::Cyan);
-        }
+                break;
+        };
 
 }
 

@@ -9,6 +9,7 @@
 //////////////////
 // Files needed
 /////////////////
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include "Window.hpp"
