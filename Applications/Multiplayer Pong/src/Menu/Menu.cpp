@@ -38,12 +38,6 @@ Menu::Menu(sf::RenderWindow *window) : textbox(window),
     exit.setCharacterSize(20);
     exit.setPosition(610, 500);
 
-    MenuItems.push_back(Title);
-    MenuItems.push_back(LocalGame);
-    MenuItems.push_back(OnlineMatch);
-    MenuItems.push_back(Option);
-    MenuItems.push_back(exit);
-
     textbox.InitTextBox(420, 620);
 
 }
