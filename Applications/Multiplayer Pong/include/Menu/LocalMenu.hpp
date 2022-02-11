@@ -39,7 +39,7 @@ public:
      * @brief runs every frame like every other update method
      *
      */
-    void update();
+    void update(bool showMenu);
     /**
      * @brief renders the stuff on the windows like every other
      *

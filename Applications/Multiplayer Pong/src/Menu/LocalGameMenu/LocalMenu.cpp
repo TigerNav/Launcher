@@ -30,7 +30,9 @@ LocalMenu::LocalMenu(sf::RenderWindow *window){
 
 }
 
-void LocalMenu::update() {
+void LocalMenu::update(bool showMenu) {
+
+
 
     if(renderLocalMenu) {
 
@@ -74,11 +76,18 @@ void LocalMenu::update() {
                 Host.setFillColor(sf::Color::White);
                 Join.setFillColor(sf::Color::White);
                 Back.setFillColor(sf::Color::Cyan);
+                if(sf::Mouse::isButtonPressed(sf::Mouse::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) {
+                    showMenu = true;
+                    renderLocalMenu = false;
+                    
+                }
                 break;
+
+                
         };
 
 }
-
+    
 }
 
 void LocalMenu::render() {

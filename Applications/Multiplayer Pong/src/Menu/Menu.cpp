@@ -53,6 +53,8 @@ void Menu::PollUpdate() {
 
 void Menu::update() {
 
+    std::cout << showMenu << std::endl;
+
     if(showMenu){
 
         if(engine::MouseCollision(LocalGame)) {
@@ -162,7 +164,7 @@ void Menu::update() {
     }
 
     if(showLocal){
-        localMenu.update();
+        localMenu.update(&showLocal);
     }
     if(showOption){
 
@@ -171,6 +173,8 @@ void Menu::update() {
         
         std::exit(0);
     }
+
+    
 
 }
 
