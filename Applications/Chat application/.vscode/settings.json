@@ -59,7 +59,8 @@
         "gtkaboutdialog.h": "c",
         "ui.h": "c",
         "uielements.h": "c",
-        "gtktextview.h": "c"
+        "gtktextview.h": "c",
+        "networking.h": "c"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }

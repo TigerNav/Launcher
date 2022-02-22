@@ -32,6 +32,7 @@
             <property name="height-request">623</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
+            <property name="editable">False</property>
           </object>
           <packing>
             <property name="x">10</property>

@@ -1,8 +1,7 @@
 {
     "files.associations": {
         "*.tpp": "cpp",
-        "gtk.h": "c",
-        "arraylist.h": "c"
+        "inet.h": "c"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }

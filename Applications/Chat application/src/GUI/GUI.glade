@@ -77,6 +77,34 @@
             <property name="y">10</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkButton" id="voicecall">
+            <property name="label" translatable="yes">Voice Call</property>
+            <property name="width-request">99</property>
+            <property name="height-request">24</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+          </object>
+          <packing>
+            <property name="x">677</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="videocall">
+            <property name="label" translatable="yes">Video Call</property>
+            <property name="width-request">59</property>
+            <property name="height-request">24</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+          </object>
+          <packing>
+            <property name="x">795</property>
+            <property name="y">5</property>
+          </packing>
+        </child>
       </object>
     </child>
   </object>

@@ -13,8 +13,6 @@ DefineElements(GtkBuilder* builder)    {
     Entry           =       GTK_WIDGET(gtk_builder_get_object(builder, "entry"));
     Label           =       GTK_WIDGET(gtk_builder_get_object(builder, "username"));
 
-
-    gtk_text_view_set_editable(GTK_TEXT_VIEW(TextArea), FALSE);
     gtk_label_set_text(GTK_LABEL(Label), getUsername());
 
 }
