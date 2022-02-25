@@ -15,11 +15,12 @@
         <child>
           <object class="GtkButton" id="Submit">
             <property name="label" translatable="yes">Submit</property>
-            <property name="width-request">210</property>
-            <property name="height-request">63</property>
+            <property name="width-request">189</property>
+            <property name="height-request">58</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
+            <signal name="clicked" handler="SendMessage" swapped="no"/>
           </object>
           <packing>
             <property name="x">827</property>
@@ -27,28 +28,15 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTextView" id="textfield">
-            <property name="width-request">1024</property>
-            <property name="height-request">623</property>
-            <property name="visible">True</property>
-            <property name="can-focus">True</property>
-            <property name="editable">False</property>
-          </object>
-          <packing>
-            <property name="x">10</property>
-            <property name="y">48</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkEntry" id="entry">
             <property name="name">entry</property>
-            <property name="width-request">810</property>
+            <property name="width-request">802</property>
             <property name="height-request">59</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
           </object>
           <packing>
-            <property name="x">12</property>
+            <property name="x">20</property>
             <property name="y">688</property>
           </packing>
         </child>
@@ -103,6 +91,36 @@
           <packing>
             <property name="x">795</property>
             <property name="y">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="ScrollWindow">
+            <property name="width-request">995</property>
+            <property name="height-request">607</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="shadow-type">in</property>
+            <child>
+              <object class="GtkViewport" id="viewport">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkTextView" id="TextArea">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="editable">False</property>
+                    <property name="wrap-mode">word</property>
+                    <property name="left-margin">5</property>
+                    <property name="right-margin">5</property>
+                    <property name="monospace">True</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">20</property>
+            <property name="y">61</property>
           </packing>
         </child>
       </object>

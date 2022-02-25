@@ -10,7 +10,7 @@
 #include <sys/socket.h>
 #include <pthread.h>
 
-#define MAXCLIENTS 99
+#define MAXCLIENTS 999999
 #define PORT 5000
 
 int socket_desc, client_sock, client_size;
@@ -22,13 +22,12 @@ struct sockaddr_in Server_Address;
 struct sockaddr_in Client_Address;
 
 pthread_t ThreadArray[MAXCLIENTS];
+pthread_t thread;
 
-char message[2000];
+char message[65000];
 
 
 void *EchoThread(void *ptr) {
-
-    printf("\nfuck\n");
 
     while(1) {
 
@@ -38,6 +37,22 @@ void *EchoThread(void *ptr) {
         }
         printf("\n Client Join from port : %i \n Client Join from IP : %i \n", Client_Address.sin_port, Client_Address.sin_addr.s_addr);
         
+        if(send(client_sock, message, strlen(message), 0) < 0) {
+            printf("\n Cant Send Message \n");
+            return -1;
+        }
+
+        printf("\n Shit \n");
+
+        if(recv(client_sock, message, strlen(message), 0) < 0) {
+            printf("\n Error with reciving message \n");
+            return -1;
+        }
+        
+        
+
+
+        printf(message);
 
     }
 
@@ -83,7 +98,7 @@ int main() {
         
         strcpy(message, "shit fuck");
        
-        pthread_t thread;
+        
         
         pthread_create(&thread, NULL, &EchoThread, NULL);
         pthread_join(thread, NULL);
