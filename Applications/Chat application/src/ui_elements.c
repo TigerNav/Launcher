@@ -6,6 +6,7 @@ GtkWidget       *Label;
 GtkWidget       *ScrollWindow;
 GtkWidget       *viewport;
 GtkWidget       *TextArea;
+GtkTextBuffer   *TextBuffer;
 
 
 
@@ -18,6 +19,8 @@ DefineElements(GtkBuilder* builder)    {
     ScrollWindow    =       GTK_WIDGET(gtk_builder_get_object(builder, "ScrollWindow"));
     viewport        =       GTK_WIDGET(gtk_builder_get_object(builder, "viewport"));
     TextArea        =       GTK_WIDGET(gtk_builder_get_object(builder, "TextArea"));
+
+    TextBuffer      =       gtk_text_view_get_buffer(GTK_TEXT_VIEW(getTextArea()));
 
     gtk_label_set_text(GTK_LABEL(Label), getUsername());
 
@@ -36,5 +39,10 @@ getTextArea()       {
 GtkWidget*
 getEntry()          {    
     return Entry;
+}
+
+GtkTextBuffer*
+getTextBuffer() {
+    return TextBuffer;
 }
 

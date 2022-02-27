@@ -3,6 +3,7 @@
 
 #include <gtk/gtk.h>
 #include <gtk/gtkx.h>
+#include <pthread.h>
 #include <string.h>
 #include "ui_elements.h"
 #include "json_info.h"

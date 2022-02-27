@@ -21,10 +21,10 @@ struct sockaddr_in Server_Address;
 // Will act like a client in the server and store all the data of the client
 struct sockaddr_in Client_Address;
 
-pthread_t ThreadArray[MAXCLIENTS];
 pthread_t thread;
 
-char message[65000];
+char getmessage[65000];
+char sendmessage[65000];
 
 
 void *EchoThread(void *ptr) {
@@ -36,24 +36,23 @@ void *EchoThread(void *ptr) {
             printf("\n Server could not accept socket connection \n");
         }
         printf("\n Client Join from port : %i \n Client Join from IP : %i \n", Client_Address.sin_port, Client_Address.sin_addr.s_addr);
-        
-        if(send(client_sock, message, strlen(message), 0) < 0) {
-            printf("\n Cant Send Message \n");
-            return -1;
+
+        if(recv(client_sock, getmessage, sizeof(getmessage), 0) < 0) {
+            perror("\n cant recive anything from client \n");
         }
+        printf("Message recived to client \n");
+        
 
-        printf("\n Shit \n");
+        printf("%s \n", getmessage);
 
-        if(recv(client_sock, message, strlen(message), 0) < 0) {
-            printf("\n Error with reciving message \n");
-            return -1;
+
+        if(send(client_sock, getmessage, sizeof(getmessage), 0) < 0) { 
+            perror("\n Error with sending message \n");
         }
+        printf("Message sent to client \n");
+
         
         
-
-
-        printf(message);
-
     }
 
 }
@@ -92,12 +91,12 @@ int main() {
     }
     printf("\n Searching for clients \n");
 
+
+
     while(1) {
         // Accepting any incoming connections
         client_size = sizeof(Client_Address);
-        
-        strcpy(message, "shit fuck");
-       
+           
         
         
         pthread_create(&thread, NULL, &EchoThread, NULL);
@@ -107,7 +106,7 @@ int main() {
 
     }
 
-    fflush(stdout);
+    
     return 0;
 
 }

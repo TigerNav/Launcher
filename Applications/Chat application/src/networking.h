@@ -10,7 +10,7 @@
 #include "json_info.h"
 
 
-void EchoThread();
+void *NetworkThread(void *ptr);
 void ConnectToServer();
 void SendMessage();
 

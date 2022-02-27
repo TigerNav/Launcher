@@ -3,7 +3,12 @@
         "*.tpp": "cpp",
         "gtk.h": "c",
         "arraylist.h": "c",
-        "ui_elements.h": "c"
+        "ui_elements.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "socket.h": "c",
+        "*.ipp": "c",
+        "system_error": "c"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }

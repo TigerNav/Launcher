@@ -22,8 +22,6 @@ int main(int argc, char *argv[]) {
 
     UI();
 
-    gtk_main();
-
     return 0;
 
 }

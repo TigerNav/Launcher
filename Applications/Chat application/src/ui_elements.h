@@ -5,9 +5,10 @@
 #include <gtk/gtkx.h>
 #include "json_info.h"
 
-GtkWidget* getEntry();
-GtkWidget* getTextArea();
-GtkWidget* getSubmit();
-void       DefineElements(GtkBuilder* builder); 
+GtkWidget*      getEntry();
+GtkWidget*      getTextArea();
+GtkWidget*      getSubmit();
+GtkTextBuffer*  getTextBuffer();
+void            DefineElements(GtkBuilder* builder); 
 
 #endif
