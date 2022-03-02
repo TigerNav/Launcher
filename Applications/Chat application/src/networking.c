@@ -27,17 +27,11 @@ ConnectToServer() {
 
     while(1) {
 
-        if(send(socket_desc, client_message, sizeof(client_message), 0) < 0) {
-            perror("\n cant send LE message \n");
-        }
-
         if(recv(socket_desc, server_message, sizeof(server_message), 0) < 0) {
             printf("\n error in revicing message \n");
         }
 
-        printf(" %s \n",server_message);
-        sleep(1);
-
+        printf("%s",server_message);
         
     }
 }
@@ -51,7 +45,10 @@ void
 
 void 
 SendMessage() {
-    strcpy(client_message, gtk_entry_get_text(GTK_ENTRY(getEntry())));
+    strcpy(client_message, getUsername());
+    strcat(client_message, " : ");
+    strcat(client_message, gtk_entry_get_text(GTK_ENTRY(getEntry())));
+    strcat(client_message, "\n");
     if(send(socket_desc, client_message, sizeof(client_message), 0) < 0) {
         perror("\n shit didnt send \n");
     }

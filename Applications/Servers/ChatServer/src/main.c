@@ -22,34 +22,39 @@ struct sockaddr_in Server_Address;
 struct sockaddr_in Client_Address;
 
 pthread_t thread;
+pthread_t thread_array[MAXCLIENTS];
 
 char getmessage[65000];
 char sendmessage[65000];
 
+int client_message;
 
 void *EchoThread(void *ptr) {
 
+    int new_socket = *((int *)ptr);
+
     while(1) {
 
-        int client_sock = accept(socket_desc, (struct sockaddr*) &Client_Address, (socklen_t*)&client_size);
-        if(client_sock < 0){
-            printf("\n Server could not accept socket connection \n");
-        }
-        printf("\n Client Join from port : %i \n Client Join from IP : %i \n", Client_Address.sin_port, Client_Address.sin_addr.s_addr);
+        
+        client_message = recv(new_socket, getmessage, sizeof(getmessage + 1), 0);
 
-        if(recv(client_sock, getmessage, sizeof(getmessage), 0) < 0) {
+        if(client_message < 0) {
             perror("\n cant recive anything from client \n");
+            exit(1);
         }
         printf("Message recived to client \n");
         
 
-        printf("%s \n", getmessage);
+        printf("%s", getmessage);
 
-
-        if(send(client_sock, getmessage, sizeof(getmessage), 0) < 0) { 
+        
+        if((send(new_socket, getmessage, sizeof(getmessage + 1), 0)) == -1) { 
             perror("\n Error with sending message \n");
+            exit(1);
         }
         printf("Message sent to client \n");
+
+        sleep(1);
 
         
         
@@ -64,7 +69,7 @@ int main() {
 
     if(socket_desc < 0) {
         printf("\n shit fuck \n");
-        return 1;
+        exit(1);
     }
 
     // Defines Connection outside machine
@@ -77,36 +82,32 @@ int main() {
 
     // Binds server to port and IP
 
-    if(bind(socket_desc, (struct sockaddr*) &Server_Address, sizeof(Server_Address)) < 0) {
-        printf("\nError while trying to bind\n");
-        return 1;
+    if((bind(socket_desc, (struct sockaddr*) &Server_Address, sizeof(Server_Address))) < 0) {
+        perror("Error while trying to bind");
+        exit(1);
     }
 
     printf("\n Accepted Bind \n");
     
     // Find any clients that are trying to join
-    if(listen(socket_desc, 1) < 0) {
+    if((listen(socket_desc, 1)) < 0) {
         printf("\n Could not find any clients \n");
-        return 1;
     }
     printf("\n Searching for clients \n");
-
 
 
     while(1) {
         // Accepting any incoming connections
         client_size = sizeof(Client_Address);
            
+        int client_sock = accept(socket_desc, (struct sockaddr*) &Client_Address, (socklen_t*)&client_size);
+        if(client_sock < 0){
+            printf("\n Server could not accept socket connection \n");
+        }
+        printf("\n Client Join from port : %i \n Client Join from IP : %i \n", Client_Address.sin_port, Client_Address.sin_addr.s_addr);
         
+        pthread_create(&thread, NULL, &EchoThread, &client_sock);
         
-        pthread_create(&thread, NULL, &EchoThread, NULL);
-        pthread_join(thread, NULL);
-
-        
-
     }
-
-    
     return 0;
-
 }

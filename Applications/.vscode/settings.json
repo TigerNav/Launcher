@@ -8,7 +8,9 @@
         "stdio.h": "c",
         "socket.h": "c",
         "*.ipp": "c",
-        "system_error": "c"
+        "system_error": "c",
+        "complex": "c",
+        "json_info.h": "c"
     },
     "terminal.integrated.shell.windows": "cmd.exe"
 }
